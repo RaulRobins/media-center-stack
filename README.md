@@ -47,7 +47,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 
 **Essential Settings (.env)**  
 
-    ```bash
+    
     # VPN Configuration (PIA)
     OPENVPN_PROVIDER=PIA
     OPENVPN_CONFIG=france
@@ -62,7 +62,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 
     # Plex Claim (Optional)
     # PLEX_CLAIM=claim-xxxxxxxxxxxxxxxx
-    ```
+ 
 
 **Volume Structure**  
 
