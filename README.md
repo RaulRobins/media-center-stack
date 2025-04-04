@@ -45,7 +45,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 
 ### 🔧 Configuration
 
-**Essential Settings (.env)**
+**Essential Settings (.env)**  
     ```ini
     # VPN Configuration (PIA)
     OPENVPN_PROVIDER=PIA
@@ -63,7 +63,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
     # PLEX_CLAIM=claim-xxxxxxxxxxxxxxxx
     ```
 
-**Volume Structure**
+**Volume Structure**  
     ```plaintext
     /media/
     ├── usb1/                 # Main storage
