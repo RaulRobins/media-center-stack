@@ -64,7 +64,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
     ```
 
 **Volume Structure**
-    ```yaml
+    ```plaintext
     /media/
     ├── usb1/                 # Main storage
     │   ├── downloads/        # Transmission downloads
