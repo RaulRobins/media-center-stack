@@ -94,6 +94,37 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 | Plex         | `32400`  | `http://<IP>:32400/web`  | Plex account | ![Plex](https://img.shields.io/badge/status-active-success) |
 | Samba        | `139/445`| `smb://<IP>/Media`       | System user | ![Samba](https://img.shields.io/badge/status-active-success) |
 
+## 🔒 Security Best Practices
 
+### VPN Configuration
+- **Credential Security**
+  - Always store VPN credentials in `.env` file:
+    ```ini
+    # .env
+    OPENVPN_USERNAME=your_username
+    OPENVPN_PASSWORD=your_password
+    ```
+  - Never commit credentials in `docker-compose.yml`
+
+- **Performance Enhancement**
+  - Consider using WireGuard for better performance:
+    ```yaml
+    # In transmission service config
+    environment:
+      - OPENVPN_PROVIDER=PIA
+      - OPENVPN_CONFIG=wireguard
+    ```
+
+### Plex Security
+- **Account Protection**
+  - Enable Two-Factor Authentication (2FA) in Plex account settings
+  - Use claim token only during initial setup:
+    ```yaml
+    # Remove after first run
+    environment:
+      - PLEX_CLAIM=claim-xxxxxxxxxx
+    ```
+
+    ```
 
   
