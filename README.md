@@ -2,6 +2,8 @@
 
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 ![Plex](https://img.shields.io/badge/Plex-000000?style=for-the-badge&logo=plex&logoColor=white)
+[![Jellyfin](https://img.shields.io/badge/Jellyfin-00A4DC?style=for-the-badge&logo=jellyfin&logoColor=white)](https://jellyfin.org)
+
 
 A complete self-hosted media ecosystem featuring secure torrenting, automated media management, and streaming capabilities.
 
