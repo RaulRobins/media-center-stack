@@ -46,7 +46,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 ### 🔧 Configuration
 
 **Essential Settings (.env)**  
-    ```ini
+    ```bash
     # VPN Configuration (PIA)
     OPENVPN_PROVIDER=PIA
     OPENVPN_CONFIG=france
@@ -65,7 +65,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 
 **Volume Structure**  
 
-    ```bash
+   
         /media/
         ├── usb1/                 # Main storage
         │   ├── downloads/        # Transmission downloads
@@ -80,4 +80,4 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
             ├── lidarr/           # Music database
             ├── prowlarr/         # Indexer config
             └── plex/             # Media library metadata
-    ```
+  
