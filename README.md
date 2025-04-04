@@ -5,6 +5,8 @@
 [![Jellyfin](https://img.shields.io/badge/Jellyfin-00A4DC?style=for-the-badge&logo=jellyfin&logoColor=white)](https://jellyfin.org)
 ![Navidrome](https://img.shields.io/badge/Navidrome-0084B4?style=for-the-badge&logo=navidrome&logoColor=white)
 ![PIA VPN](https://img.shields.io/badge/PIA_VPN-4BC62D?style=for-the-badge&logo=privateinternetaccess&logoColor=white)
+![Portainer](https://img.shields.io/badge/Portainer-13BEF9?style=for-the-badge&logo=portainer&logoColor=white)
+![Flame](https://img.shields.io/badge/Flame-FF6B6B?style=for-the-badge&logo=firebase&logoColor=white)
 
 A complete self-hosted media ecosystem featuring secure torrenting, automated media management, and streaming capabilities.
 
