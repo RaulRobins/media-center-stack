@@ -3,7 +3,8 @@
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 ![Plex](https://img.shields.io/badge/Plex-000000?style=for-the-badge&logo=plex&logoColor=white)
 [![Jellyfin](https://img.shields.io/badge/Jellyfin-00A4DC?style=for-the-badge&logo=jellyfin&logoColor=white)](https://jellyfin.org)
-
+![Navidrome](https://img.shields.io/badge/Navidrome-0084B4?style=for-the-badge&logo=navidrome&logoColor=white)
+![PIA VPN](https://img.shields.io/badge/PIA_VPN-4BC62D?style=for-the-badge&logo=privateinternetaccess&logoColor=white)
 
 A complete self-hosted media ecosystem featuring secure torrenting, automated media management, and streaming capabilities.
 
