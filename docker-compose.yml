@@ -1,0 +1,130 @@
+---
+version: "3.7"
+services:
+  # https://github.com/haugene/docker-transmission-openvpn
+  transmission:
+    image: haugene/transmission-openvpn:latest
+    container_name: transmission
+    restart: always
+    ports:
+      - "9091:9091"
+    # https://haugene.github.io/docker-transmission-openvpn/config-options/
+    environment:
+      - OPENVPN_PROVIDER=PIA
+      - OPENVPN_CONFIG=france
+      - OPENVPN_USERNAME=p3723479
+      - OPENVPN_PASSWORD=DgNc7GrwJU
+      - WEBPROXY_ENABLED=false
+      - LOCAL_NETWORK=192.168.0.0/16
+      - TRANSMISSION_WEB_UI=flood-for-transmission
+    volumes:
+      - /media/usb1/downloads:/data
+      - /etc/localtime:/etc/localtime:ro
+    cap_add:
+      - NET_ADMIN
+
+  # https://github.com/linuxserver/docker-radarr
+  radarr:
+    image: linuxserver/radarr:latest
+    container_name: radarr
+    restart: always
+    ports:
+      - "7878:7878"
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - /media/radarr:/config
+      - /media/usb1/movies:/movies
+      - /media/usb1/downloads/completed:/downloads
+
+
+# https://github.com/linuxserver/docker-lidarr
+  lidarr:
+    image: linuxserver/lidarr:latest
+    container_name: lidarr
+    restart: always
+    ports:
+      - "8686:8686"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - /media/lidarr:/config
+      - /media/usb1/music:/music
+      - /media/usb1/downloads/completed:/downloads
+
+
+  # https://github.com/linuxserver/docker-sonarr
+  sonarr:
+    image: linuxserver/sonarr:latest
+    container_name: sonarr
+    restart: always
+    ports:
+      - "8989:8989"
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - /media/sonarr:/config
+      - /media/usb1/tv:/tv
+      - /media/usb1/downloads/completed:/downloads
+
+  # https://github.com/linuxserver/docker-prowlarr
+  prowlarr:
+    image: linuxserver/prowlarr:develop
+    container_name: prowlarr
+    restart: always
+    ports:
+      - "9696:9696"
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=America/Mexico_City
+    volumes:
+      - /media/prowlarr:/config
+      - /media/usb1/downloads/watch:/downloads  # transmission watch directory
+
+  # https://hub.docker.com/r/linuxserver/plex
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Mexico_City
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    volumes:
+      - /media/plex/library:/config
+      - /media/usb1/tv:/tv
+      - /media/usb1/movies:/movies
+    restart: unless-stopped
+
+  # https://github.com/dperson/samba
+  samba:
+    image: dperson/samba:latest
+    container_name: samba
+    restart: always
+    # NOTE: see https://github.com/dperson/samba#troubleshooting
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    ports:
+      - "139:139"
+      - "445:445"
+    environment:
+      - USERID=1000
+      - GROUPID=1000
+      - SHARE=Media;/media
+      - TZ=America/Mexico_City
+    volumes:
+      - /media:/media
+
