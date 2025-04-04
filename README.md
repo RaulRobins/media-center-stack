@@ -64,6 +64,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
     ```
 
 **Volume Structure**  
+
     ```bash
         /media/
         ├── usb1/                 # Main storage
