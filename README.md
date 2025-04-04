@@ -65,18 +65,18 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 
 **Volume Structure**  
     ```bash
-    /media/
-    ├── usb1/                 # Main storage
-    │   ├── downloads/        # Transmission downloads
-    │   ├── movies/           # Radarr-managed movies
-    │   ├── tv/               # Sonarr-managed TV shows
-    │   └── music/            # Lidarr-managed music
-    │
-    └── configs/
-        ├── transmission/     # VPN and client config
-        ├── radarr/           # Movie database
-        ├── sonarr/           # TV show database
-        ├── lidarr/           # Music database
-        ├── prowlarr/         # Indexer config
-        └── plex/             # Media library metadata
+        /media/
+        ├── usb1/                 # Main storage
+        │   ├── downloads/        # Transmission downloads
+        │   ├── movies/           # Radarr-managed movies
+        │   ├── tv/               # Sonarr-managed TV shows
+        │   └── music/            # Lidarr-managed music
+        │
+        └── configs/
+            ├── transmission/     # VPN and client config
+            ├── radarr/           # Movie database
+            ├── sonarr/           # TV show database
+            ├── lidarr/           # Music database
+            ├── prowlarr/         # Indexer config
+            └── plex/             # Media library metadata
     ```
