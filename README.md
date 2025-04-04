@@ -81,4 +81,19 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
             ├── lidarr/           # Music database
             ├── prowlarr/         # Indexer config
             └── plex/             # Media library metadata
+
+**🌐 Accessing Services**
+
+| Service      | Port     | Access URL               | Credentials | Status |
+|--------------|----------|--------------------------|-------------|--------|
+| Transmission | `9091`   | `http://<IP>:9091`       | None | ![Transmission](https://img.shields.io/badge/status-active-success) |
+| Radarr       | `7878`   | `http://<IP>:7878`       | Set on launch | ![Radarr](https://img.shields.io/badge/status-active-success) |
+| Sonarr       | `8989`   | `http://<IP>:8989`       | Set on launch | ![Sonarr](https://img.shields.io/badge/status-active-success) |
+| Lidarr       | `8686`   | `http://<IP>:8686`       | Set on launch | ![Lidarr](https://img.shields.io/badge/status-active-success) |
+| Prowlarr     | `9696`   | `http://<IP>:9696`       | Set on launch | ![Prowlarr](https://img.shields.io/badge/status-active-success) |
+| Plex         | `32400`  | `http://<IP>:32400/web`  | Plex account | ![Plex](https://img.shields.io/badge/status-active-success) |
+| Samba        | `139/445`| `smb://<IP>/Media`       | System user | ![Samba](https://img.shields.io/badge/status-active-success) |
+
+
+
   
