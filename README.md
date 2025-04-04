@@ -46,6 +46,7 @@ A complete self-hosted media ecosystem featuring secure torrenting, automated me
 ### 🔧 Configuration
 
 **Essential Settings (.env)**  
+
     ```bash
     # VPN Configuration (PIA)
     OPENVPN_PROVIDER=PIA
